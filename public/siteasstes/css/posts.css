@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px; /* إضافة مسافة للمحتوى تحت الـ navbar */
+}
+
+.gallery {
+    display: inline-grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    padding: 5px;
+}
+
+.gallery-item-link {
+    text-decoration: none; /* إزالة الخط السفلي من الرابط */
+    color: inherit; /* استخدام لون النص الأصلي */
+}
+
+.gallery-item {
+    background-color: #ffffff;
+    padding: 0px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: right;
+    transition: transform 0.3s, box-shadow 0.3s;
+    direction: rtl;
+    /* margin-bottom: auto; */
+}
+
+.gallery-item:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item .post-image {
+    width: 100%;
+    height: 70%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.author-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.author-info span {
+    font-weight: 600;
+    color: #333;
+}
+
+.author-details {
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+}
+
+.author-name{
+    font-size: 12px;
+}
+
+.post-time {
+    color: #666; /* لون خفيف للوقت */
+    font-size: 12px; /* حجم أصغر للوقت */
+}
+
+.follow-btn {
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+}
+
+.follow-btn:hover {
+    background-color: #cc001f;
+}
+
+.unfollow-btn {
+    background-color: white;
+    color: #e60023;
+    border: 2px solid #e60023;
+    border-radius: 20px;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left: 5px;
+}
+
+.unfollow-btn:hover {
+    background-color: #cc001f;
+    color: white;
+}
+
+.post-title {
+    margin-top: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.post-content {
+    margin-top: 5px;
+    margin-right: 5px;
+    font-size: 14px; /* حجم النص */
+    color: #212121; /* لون النص */
+    word-wrap: break-word; /* كسر الكلمات الطويلة */
+    white-space: nowrap; /* منع الالتفاف للنص */
+    overflow: hidden; /* إخفاء النص الزائد */
+    text-overflow: ellipsis; /* إضافة النقاط الثلاثية */
+    max-width: 80%; /* ضبط العرض الأقصى للنص */
+    line-height: 1.5; /* تحسين تباعد الأسطر */
+}
+
+.like-button {
+    align-items: center;
+    font-size: 22px;
+    margin-left: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.like-button i {
+    color: red;
+    transition: color 0.3s;
+}
+
+.like-button i.liked {
+    color: red; /* اللون عند الإعجاب */
+}
+
+.comment-button {
+    align-items: center;
+    font-size: 20px;
+    margin-left: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.comment-button i {
+    color: black;
+}
+
+.bookmark-button {
+    align-items: center;
+    font-size: 20px;
+    margin-left: 15px;
+    display: block;
+    cursor: pointer;
+}
+
+.bookmark-button i {
+    color: gold;
+}
+
+.gallery-item .actions {
+    margin-top: 10px;
+    display: flex;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.gallery-item .actions a:hover {
+    color: #007bff;
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<>>>>>>>>>>>>>>>>>>>> */
+/* إعدادات زر انشاء المنشور */
+
+.createPost-button {
+    position: fixed; /* يظل الزر ثابتًا في أعلى الصفحة */
+    bottom: 20px;
+    left: 20px;
+    z-index: 1000; /* فوق جميع العناصر الأخرى */
+}
+
+.createPost-button button {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.createPost-button button i {
+    font-size: 18px;
+    color: #e60023; /* لون السهم الأحمر مثل Pinterest */
+}
+
+.createPost-button button:hover {
+    background-color: #f4f4f4;
+}

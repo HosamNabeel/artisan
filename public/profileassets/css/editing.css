@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Harmattan:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&display=swap');
+
+body {
+    background: #f0f2f5;
+    background-size: cover;
+    font-family: 'Playfair Display', serif;
+    color: #343a40;
+}
+
+/* إعدادات زر الرجوع */
+.back-button {
+    position: fixed; /* يظل الزر ثابتًا في أعلى الصفحة */
+    top: 20px;
+    left: 20px;
+    z-index: 1000; /* فوق جميع العناصر الأخرى */
+}
+
+.back-button button {
+    background-color: #ffffff;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.back-button button i {
+    font-size: 18px;
+    color: #e60023; /* لون السهم الأحمر مثل Pinterest */
+}
+
+.back-button button:hover {
+    background-color: #f4f4f4;
+}
+
+h4 {
+    color: #1a1a1a;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.fixed-avatar {
+    width: 300px;  /* الحجم الثابت للعرض */
+    height: 300px; /* الحجم الثابت للطول */
+    object-fit: cover; /* لضمان تناسب الصورة داخل الإطار */
+
+}
+
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+.list-group-item {
+    background-color: #ffffff;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.list-group-item:hover,
+.list-group-item.active {
+    background-color: #e3f2fd;
+    color: #007bff;
+    transform: scale(1.05);
+}
+
+.card {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-body .form-group label {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25);
+}
+
+.btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #343a40;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #212529;
+    color: #e9ecef;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-outline-primary {
+    border: 2px solid #343a40;
+    color: #343a40;
+}
+
+.btn-outline-primary:hover {
+    background-color: #343a40;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.text-light.small {
+    color: #6c757d !important;
+}
+
+.nav-link,
+.list-group-item {
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    color: #495057;
+    transition: color 0.3s;
+}
+
+.nav-link:hover,
+.list-group-item:hover {
+    color: #212529;
+}
+
+.switcher {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.switcher-label {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.switcher-input:checked+.switcher-indicator .switcher-yes {
+    background-color: #007bff;
+}
+
+.switcher-indicator {
+    position: relative;
+    display: block;
+    width: 38px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.switcher-yes {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.switcher-input:checked+.switcher-indicator {
+    background-color: #d3d7db9b;
+}
+
+.switcher-input:checked+.switcher-indicator .switcher-yes {
+    left: 18px;
+}
+
+.switcher-indicator:hover {
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .btn {
+        padding: 0.5rem 1rem;
+    }
+}

@@ -1,0 +1,555 @@
+@import url('https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+body {
+    font-family: 'Cairo', sans-serif;
+    background: #f0f2f5;
+    direction: rtl;
+    margin: 0;
+    padding: 0;
+    padding-top: 60px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+/* Header Section */
+.profile-header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+}
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px;
+    border: 2px solid #2c3e50;
+}
+.profile-info {
+    flex-grow: 1;
+}
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+.profile-bio {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+.profile-bio i{
+    font-size: 10px;
+    margin-left: 5px;
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+}
+.follow-btn {
+    background-color: #e60023;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 6px ;
+    max-height: 40px;
+    width: 140px;
+}
+.unfollow-btn{
+    width: 140px;
+}
+.massege-btn{
+    background-color: #1300e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 6px ;
+    width: 140px;
+}
+.post-btn{
+    background-color: #1300e6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 6px ;
+    width: 140px;
+}
+.follow-btn:hover {
+    background-color: #c1001a;
+}
+.post-btn:hover {
+    background-color: #0f00b3;
+}
+.massege-btn:hover {
+    background-color: #0f00b3;
+}
+/* ++++++++++++++++++++ */
+/* Stats Section */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 0;
+    /* border-bottom: 1px solid #ddd; */
+}
+.stat-item {
+    text-align: center;
+}
+.stat-item:hover {
+    cursor: pointer;
+}
+.stat-icon{
+    font-size: 20px;
+    display: inline;
+}
+.stat-item strong {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+.stat-item span {
+    font-size: 15px;
+    color: #666;
+}
+.profile-story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px 15px;
+    border-bottom: 1px solid #ddd;
+}
+.profile-story h2{
+    margin-bottom: 6px;
+}
+/* Image Grid Section */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+}
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.modal {
+    display: none; /* يتم إخفاء النافذة في البداية */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%; /* عرض النافذة */
+    max-width: 500px; /* العرض الأقصى للنافذة */
+    max-height: 80vh; /* ارتفاع ثابت بنسبة 80% من نافذة العرض */
+    overflow-y: auto; /* تفعيل التمرير العمودي */
+    -ms-overflow-style: none;  /* إخفاء شريط التمرير في إنترنت إكسبلورر وEdge */
+    scrollbar-width: none;     /* إخفاء شريط التمرير في Firefox */
+}
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+.followers-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+
+}
+
+.follow-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+
+.followers-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    padding: 5px;
+}
+
+.user-info .username{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-info .num-followers{
+    font-size: 15px;
+    color: #666;
+}
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+    object-fit: cover;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .profile-picture {
+        margin-bottom: 10px;
+    }
+    /* .profile-stats {
+        flex-direction: column;
+        text-align: center;
+    } */
+    .stat-item {
+        margin-bottom: 10px;
+    }
+    .modal-content {
+        max-width: 350px;
+    }
+}
+
+/* ================== */
+/* .stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.stat-item {
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: scale(1.1);
+}
+
+.stat-item h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #333;
+}
+
+.stat-item p {
+    margin: 5px 0;
+    color: #118fc9;
+    font-size: 14px;
+} */
+
+.section {
+    margin-top: 20px;
+}
+
+.section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    padding-bottom: 10px;
+    text-align: center;
+    position: relative;
+}
+
+.section h2 i {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    color: #4b79a1;
+    display: contents;
+}
+
+.section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    text-align: right;
+}
+
+.timeline {
+    margin-top: 20px;
+}
+
+.timeline h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333;
+    border-bottom: 2px solid #4b79a1;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: right;
+}
+
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.post h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    color: #4b79a1;
+}
+
+.post p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.post .interactions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.post .interactions span {
+    font-size: 14px;
+    color: #777;
+}
+
+.gallery_work {
+    margin-top: 20px;
+}
+
+.gallery_work h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #4b79a1;
+    border-bottom: 2px solid #4b79a1;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+.gallery_work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+}
+
+.gallery_work-grid img {
+    width: 100%;
+    height: 450px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.gallery_work-grid img:hover {
+    transform: scale(1.05);
+}
+
+.container1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.section1 {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section1 h2 {
+    font-size: 22px;
+    margin: 0 0 10px;
+    color: #4b79a1;
+    display: inline-block;
+    text-align: center;
+}
+
+.section1 h2 i {
+    font-size: 24px;
+    color: #4b79a1;
+    margin-left: 5px;
+}
+
+.section1 p {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #555;
+    margin: 12;
+    text-align: center;
+}
+
+.section1 ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.section1 ul li {
+    margin: 5px 0;
+}
+
+.gallery-item {
+    min-height: 570px;
+}
+
+.followers-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 400px;
+    overflow-y: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.follower-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.3s;
+}
+
+.follower-item:hover {
+    background-color: #f9f9f9;
+}
+
+.follower-info {
+    display: flex;
+    align-items: center;
+}
+
+.follower-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #ddd;
+}
+
+.follower-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.follower-name {
+    font-size: 16px;
+    margin: 0;
+    color: #333;
+}
+
+.follower-count {
+    font-size: 14px;
+    color: #888;
+    margin-top: 5px;
+}
+
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.follow-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.follow-btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.unfollow-btn-modal {
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.unfollow-btn:hover {
+    background-color: #b02a37;
+    transform: scale(1.05);
+}
+
+/* Modal adjustments */
+.modal-content {
+    padding: 20px;
+    background-color: #fdfdfd;
+    border-radius: 12px;
+    /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); */
+    max-width: 500px;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    .follower-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .btn {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

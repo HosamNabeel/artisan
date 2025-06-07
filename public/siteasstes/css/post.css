@@ -1,0 +1,736 @@
+
+    /* إعدادات عامة */
+    body {
+        direction: rtl;
+        font-family: 'Roboto', sans-serif;
+        background-color: #f0f2f5; /* خلفية رمادية فاتحة  */
+        color: #333; /* اللون الرئيسي للنص */
+        margin: 0;
+        padding: 0;
+    }
+
+    /* حاوية المنشور */
+    .post-container {
+        width: 60%;
+        max-width: 750px;
+        margin: 20px auto;
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+
+    #postCarousel {
+        position: relative; /* التأكد من أن الحاوية الرئيسية تكون نسبية */
+    }
+
+    .carousel-counter {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: rgba(0, 0, 0, 0.5); /* خلفية داكنة شبه شفافة */
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        z-index: 9999;
+    }
+
+    .post-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* .post-image {
+        margin: 0 auto;
+    } */
+
+    .carousel-inner img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+
+
+    .carousel-item {
+        height: 500px; /* يمكنك تعديل هذا الارتفاع حسب الحاجة */
+    }
+
+    .carousel-item img {
+        height: 100%; /* تأكد من أن الصور تأخذ الارتفاع المحدد */
+        object-fit: contain;
+    }
+
+
+    /* تفاصيل المنشور */
+    .post-details {
+        padding: 16px 24px;
+    }
+
+    .post-details h2 {
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 15px;
+    }
+
+    .author-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        /* margin-top: 8px; */
+    }
+
+    .author-info img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .author-info span {
+        font-weight: 600;
+        color: #333;
+    }
+
+    .author-details {
+        display: flex;
+        flex-direction: column; /* ترتيب العناصر بشكل عمودي */
+    }
+
+    .post-time {
+        color: #666; /* لون خفيف للوقت */
+        font-size: 12px; /* حجم أصغر للوقت */
+    }
+
+    .comment-time {
+        color: #666; /* لون خفيف للوقت */
+        font-size: 10px; /* حجم أصغر للوقت */
+    }
+
+    .follow-button {
+        background-color: #e60023;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        padding: 8px 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: auto; /* لجعل الزر بجانب اسم المؤلف */
+    }
+
+    .follow-button:hover {
+        background-color: #cc001f;
+    }
+
+  /* أزرار التفاعل */
+    .post-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .post-actions button {
+        display: flex;
+        align-items: center;
+        gap: 5px; /* المسافة بين الأيقونة والنص */
+        padding: 8px 12px;
+        border: none;
+        border-radius: 5px;
+        /* background-color: #ffffff; */
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    .action-btn i {
+        background-color: #ffffff;
+        font-size: 18px; /* حجم الأيقونة */
+    }
+    .action-btn{
+        background-color: #ffffff;
+    }
+
+    .save-btn i {
+        color: #f39c12; /* لون دافئ مثل البرتقالي لحفظ */
+    }
+
+    .share-btn i {
+        color: #3498db; /* لون هادئ مثل الأزرق للمشاركة */
+    }
+
+    .save-btn:hover {
+        background-color: #ffe0b3; /* تغيير لون الخلفية عند المرور */
+    }
+
+    .share-btn:hover {
+        background-color: #b3d9ff; /* تغيير لون الخلفية عند المرور */
+    }
+
+    .follow-btn {
+        background-color: #e60023;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 6px ;
+        max-height: 40px;
+    }
+
+    .follow-btn:hover {
+        background-color: #c1001a;
+    }
+
+    .unfollow-btn {
+        background-color: white;
+        color: #e60023;
+        border: 2px solid #e60023;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 14px;
+        margin-top: 6px ;
+        max-height: 40px;
+    }
+
+    .unfollow-btn:hover {
+        background-color: #cc001f;
+        color: white;
+    }
+
+  /* أيقونة القلب */
+    .like-button {
+        /* display: flex; */
+        align-items: center;
+        font-size: 20px;
+        gap: 8px; /* مسافة بين الأيقونة والعدد */
+        background-color: transparent; /* خلفية شفافة لأيقونة القلب */
+        margin-left: 15px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .comment-like-button i {
+        color: gray; /* اللون الافتراضي */
+        transition: color 0.3s;
+    }
+
+    .comment-like-button i.liked {
+        color: red; /* اللون عند الإعجاب */
+    }
+
+    .like-count {
+        font-size: 16px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+  /* وصف المنشور */
+    .post-description {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.6;
+        margin-top: 16px;
+    }
+
+  /* قسم التعليقات */
+    .add-comment-section {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 16px;
+        padding: 8px 16px;
+        background-color: #f4f4f4; /* خلفية خفيفة */
+        border-top-left-radius: 24px; /* زوايا مدورة */
+        border-top-right-radius: 24px; /* زوايا مدورة */
+    }
+
+    .comments-section {
+        margin-top: 5px;
+        border-top: 1px solid #ddd;
+
+    }
+    .comments{
+        max-height: 300px; /* الطول الأقصى لصندوق الردود */
+        overflow-y: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .comments::-webkit-scrollbar{
+        width: 0;
+    }
+
+    .comments-section h3 {
+        margin-top: 5px;
+        margin-right: 5px;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .comment {
+        margin-right: 5px;
+        display: flex;
+        align-items: flex-start;
+        gap: 5px;
+        margin-top: 10px;
+        position: relative;
+    }
+
+    .comment img {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .comment p {
+        margin: 0;
+        margin-right: 10px;
+        color: #000000;
+    }
+
+    .comment-content {
+        flex: 1;
+    }
+
+    .comment-actions {
+        display: flex;
+        gap: 10px;
+        margin-top: 4px;
+        margin-right: 10px;
+    }
+
+    .comment-actions button {
+        background-color: transparent;
+        border: none;
+        color: #555;
+        cursor: pointer;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .comment-actions .like-button:hover {
+        color: #ff0000;
+    }
+
+    .comment-actions .reply-button:hover {
+        color: #000000;
+    }
+
+    .comment-author-name {
+        font-size: 12px;
+        /* font-weight: bold; */
+        color: #000000;
+    }
+
+    .replies {
+        display: flex;
+        margin-top: 10px;
+        padding-left: 20px;
+        border-left: 2px solid #e0e0e0;
+        margin-right: 25px;
+        gap: 10px;
+    }
+
+    .reply {
+        display: flex;
+        gap: 10px;
+    }
+
+    .re-author-name{
+        font-size: 12px;
+        color: #000000;
+    }
+
+    .reply-text{
+        margin: 5px 0 0;
+        color: #444;
+        font-size: 13px;
+    }
+
+  /* صورة المستخدم */
+    .user-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    .username {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .comment-time {
+        font-size: 0.7em;
+        color: #888;
+        margin-left: 10px;
+        display: block;
+    }
+
+    .comment-text {
+        margin: 5px 0 0;
+        color: #444;
+        font-size: 14px;
+    }
+
+  /* حقل إدخال التعليق */
+  .comment-input {
+    font-size: 16px;
+    padding: 10px 40px 10px 10px;
+    width: 100%;
+    min-height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    direction: rtl; /* تحديد اتجاه النص من اليمين لليسار */
+    text-align: right; /* محاذاة النص لليمين */
+    box-sizing: border-box;
+}
+
+  /* تخصيص موضع القائمة لتظهر على الشمال */
+  .emojionearea .emojionearea-picker {
+        left: 0 !important; /* تظهر القائمة على الشمال */
+        right: auto !important; /* إزالة أي تأثيرات سابقة على اليمين */
+    }
+
+    /* تخصيص مكان الأيقونة لجعلها في الجهة اليسرى */
+    .emojionearea .emojionearea-button {
+        right: auto !important; /* إزالة الأيقونة من الجهة اليمنى */
+        left: 0 !important; /* وضع الأيقونة على الشمال */
+    }
+
+    /* تخصيص الإيموجي نفسه */
+    .emojionearea .emojionearea-editor {
+        direction: rtl;
+        text-align: right;
+    }
+
+
+
+  /* تأثير عند التركيز */
+  .comment-input:focus {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+
+  /* زر إرسال التعليق */
+  .send-comment-button {
+    background-color: transparent;
+    border: none;
+    color: #555;
+    font-size: 18px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+
+  .send-comment-button:hover {
+    color: #e60023; /* لون مختلف عند التمرير */
+  }
+
+  /* قسم المنشورات المشابهة */
+  .related-posts {
+    margin-top: 20px;
+    padding: 0 24px 20px;
+  }
+
+  .related-posts h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  .related-posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 12px;
+  }
+
+  .related-posts-grid img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+
+  .posts-container{
+    margin: 50px;
+    width: 95%;
+    height: 500px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+    /* إعدادات زر الرجوع */
+    .back-button {
+        position: fixed; /* يظل الزر ثابتًا في أعلى الصفحة */
+        top: 20px;
+        left: 20px;
+        z-index: 1000; /* فوق جميع العناصر الأخرى */
+    }
+
+    .back-button button {
+        background-color: #ffffff;
+        color: #333;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .back-button button i {
+        font-size: 18px;
+        color: #e60023; /* لون السهم الأحمر مثل Pinterest */
+    }
+
+    .back-button button:hover {
+        background-color: #f4f4f4;
+    }
+
+  .related-post {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  .post {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.post .content {
+    margin-top: 10px;
+}
+
+.post .content h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.post .content p {
+    font-size: 14px;
+    color: #555;
+}
+
+.post .post_img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.content {
+    margin-top: 10px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+    object-fit: cover;
+}
+
+.user-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.username {
+    font-weight: bold;
+    margin: 0;
+}
+
+/* تصميم الثلاث نقاط */
+.dropdown {
+    position: absolute;
+    left: 0;
+    margin-left: 20px;
+}
+
+.dropdown-menu {
+    position: absolute;
+    bottom: 100%; /* وضع القائمة تحت الثلاث نقاط */
+    left: 0;
+    background-color: #fff; /* لون خلفية القائمة */
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* لضمان ظهور القائمة فوق العناصر الأخرى */
+    display: none; /* إخفاء القائمة افتراضياً */
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block; /* عرض القائمة عند التمرير أو النقر */
+}
+
+.dropdown-menu button,.dropdown-menu a {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #007bff; /* لون الرابط */
+    padding: 5px 10px;
+    display: block;
+    transition: background-color 0.2s;
+    border-radius: 4px; /* لتنسيق الحواف */
+}
+
+.dropdown-menu button:hover, .dropdown-menu a:hover {
+    background-color: #f0f0f0; /* لون للخلفية عند التمرير */
+}
+
+/* modal CSS */
+
+.modal {
+    display: none; /* يتم إخفاء النافذة في البداية */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%; /* عرض النافذة */
+    max-width: 500px; /* العرض الأقصى للنافذة */
+    max-height: 80vh; /* ارتفاع ثابت بنسبة 80% من نافذة العرض */
+    overflow-y: auto; /* تفعيل التمرير العمودي */
+    -ms-overflow-style: none;  /* إخفاء شريط التمرير في إنترنت إكسبلورر وEdge */
+    scrollbar-width: none;     /* إخفاء شريط التمرير في Firefox */
+}
+
+.modal-content::-webkit-scrollbar {
+    display: none;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+}
+
+.followers-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+
+}
+
+.follow-item {
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    justify-content: space-between;
+}
+
+.followers-list li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    color: #333;
+}
+
+.user-info {
+    display: flex;
+    padding: 5px;
+}
+
+.user-info .username{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.user-info .num-followers{
+    font-size: 15px;
+    color: #666;
+}
+
+.user-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 5px;
+    object-fit: cover;
+}
+
+.reply-form {
+    margin-left: 40px;
+}
+
+.reply-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+.submit-reply {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.submit-reply:hover {
+    background-color: #0056b3;
+}
+
+.add-reply-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 16px;
+    padding: 8px 16px;
+    background-color: #f4f4f4; /* خلفية خفيفة */
+    border-radius: 24px; /* زوايا مدورة */
+}
