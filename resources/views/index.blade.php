@@ -36,7 +36,8 @@
 
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none">
+                <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29"
+                    fill="none">
                     <g clip-path="url(#clip0_2_17)">
                         <g filter="url(#filter0_d_2_17)">
                             <path
@@ -107,32 +108,32 @@
 
         <p id="slide-title"> للتطريز والزخف وأفكار متنوعة</p>
 
-        <div class="d_animation" id="d1"><img src="{{ asset('mainassets/img/f86984098715bad8b4a3c7071bfa22df.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d2"><img src="{{ asset('mainassets/img/b026ac15bccf85cec5c0e2144c046c0e.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d3"><img src="{{ asset('mainassets/img/38431288d1edbee30ff89f455949a59e.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d4"><img src="{{ asset('mainassets/img/1df5f56309ee2c174b41b6cdda81540d.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d5"><img src="{{ asset('mainassets/img/31ef81eb036b5a23612528b4189a1b04.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d6"><img src="{{ asset('mainassets/img/53ebb6c397a6375d33d96fc52e2d657a.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d7"><img src="{{ asset('mainassets/img/bce14e56d84e307acecd3ae534a110f3.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d8"><img src="{{ asset('mainassets/img/e64dadb4870c4a7c7f9cbf6aa7976cbd.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d9"><img src="{{ asset('mainassets/img/72efa69e37c3a717016af78a5d2074d6.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d10"><img src="{{ asset('mainassets/img/be57378567026a47cdf30ed621873080.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d11"><img src="{{ asset('mainassets/img/b8c05b6c7b5757ede7466cdea32e035b.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d12"><img src="{{ asset('mainassets/img/559488d7ecb1c8d53874be373edd69bc.jpg') }}"
-                alt=""></div>
-        <div class="d_animation" id="d13"><img src="{{ asset('mainassets/img/1d1839bf040087843373b6ef2ff19515.jpg') }}"
-                alt=""></div>
+        <div class="d_animation" id="d1"><img
+                src="{{ asset('mainassets/img/f86984098715bad8b4a3c7071bfa22df.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d2"><img
+                src="{{ asset('mainassets/img/b026ac15bccf85cec5c0e2144c046c0e.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d3"><img
+                src="{{ asset('mainassets/img/38431288d1edbee30ff89f455949a59e.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d4"><img
+                src="{{ asset('mainassets/img/1df5f56309ee2c174b41b6cdda81540d.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d5"><img
+                src="{{ asset('mainassets/img/31ef81eb036b5a23612528b4189a1b04.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d6"><img
+                src="{{ asset('mainassets/img/53ebb6c397a6375d33d96fc52e2d657a.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d7"><img
+                src="{{ asset('mainassets/img/bce14e56d84e307acecd3ae534a110f3.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d8"><img
+                src="{{ asset('mainassets/img/e64dadb4870c4a7c7f9cbf6aa7976cbd.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d9"><img
+                src="{{ asset('mainassets/img/72efa69e37c3a717016af78a5d2074d6.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d10"><img
+                src="{{ asset('mainassets/img/be57378567026a47cdf30ed621873080.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d11"><img
+                src="{{ asset('mainassets/img/b8c05b6c7b5757ede7466cdea32e035b.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d12"><img
+                src="{{ asset('mainassets/img/559488d7ecb1c8d53874be373edd69bc.jpg') }}" alt=""></div>
+        <div class="d_animation" id="d13"><img
+                src="{{ asset('mainassets/img/1d1839bf040087843373b6ef2ff19515.jpg') }}" alt=""></div>
     </div>
     <div class="contaner2">
         <div>
@@ -180,31 +181,40 @@
             <section class="unique-gallery-section" id="unique-gallery">
                 <div class="unique-gallery-container">
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/5bc8d983b79b87ff49be07c3fde2c1e9.jpg')}}" alt="صورة فريدة 1">
+                            src="{{ asset('mainassets/img/5bc8d983b79b87ff49be07c3fde2c1e9.jpg') }}"
+                            alt="صورة فريدة 1">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/caa305b1c91b978edd08dd387bfbee40.jpg')}}" alt="صورة فريدة 2">
+                            src="{{ asset('mainassets/img/caa305b1c91b978edd08dd387bfbee40.jpg') }}"
+                            alt="صورة فريدة 2">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/65612968fd3330c5a21f84285e84652d.jpg')}}" alt="صورة فريدة 3">
+                            src="{{ asset('mainassets/img/65612968fd3330c5a21f84285e84652d.jpg') }}"
+                            alt="صورة فريدة 3">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/9cb4905d0854daeb380e5d802aad2692.jpg')}}" alt="صورة فريدة 4">
+                            src="{{ asset('mainassets/img/9cb4905d0854daeb380e5d802aad2692.jpg') }}"
+                            alt="صورة فريدة 4">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/673c9d946be0706f6957fc7e91bdff0d.jpg')}}" alt="صورة فريدة 5">
+                            src="{{ asset('mainassets/img/673c9d946be0706f6957fc7e91bdff0d.jpg') }}"
+                            alt="صورة فريدة 5">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/a1125c16c5e166b6abf97488f3ce2ca7.jpg')}}" alt="صورة فريدة 6">
+                            src="{{ asset('mainassets/img/a1125c16c5e166b6abf97488f3ce2ca7.jpg') }}"
+                            alt="صورة فريدة 6">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/785324fcdf56c2e7be449fdb18632c4c.jpg')}}" alt="صورة فريدة 7">
+                            src="{{ asset('mainassets/img/785324fcdf56c2e7be449fdb18632c4c.jpg') }}"
+                            alt="صورة فريدة 7">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/fd0083fa87acfacaa786685d7d95e48d.jpg')}}" alt="صورة فريدة 8">
+                            src="{{ asset('mainassets/img/fd0083fa87acfacaa786685d7d95e48d.jpg') }}"
+                            alt="صورة فريدة 8">
                     </div>
                     <div class="unique-gallery-item"><img
-                            src="{{ asset('mainassets/img/088c78e19159686df74a08012bc74a38.jpg')}}" alt="صورة فريدة 9">
+                            src="{{ asset('mainassets/img/088c78e19159686df74a08012bc74a38.jpg') }}"
+                            alt="صورة فريدة 9">
                     </div>
                 </div>
             </section>
@@ -235,15 +245,15 @@
         </div>
         <div class="developer-circle">
             <div class="developer-item">
-                <img src="{{ asset('mainassets/img/ahmad.jpg')}}" alt="مطور 1">
+                <img src="{{ asset('mainassets/img/ahmad.jpg') }}" alt="مطور 1">
                 <h3>أحمد</h3>
             </div>
             <div class="developer-item">
-                <img src="{{ asset('mainassets/img/belal.png')}}" alt="مطور 2">
+                <img src="{{ asset('mainassets/img/belal.png') }}" alt="مطور 2">
                 <h3>بلال</h3>
             </div>
             <div class="developer-item">
-                <img src="{{ asset('mainassets/img/abed.jpg')}}" alt="مطور 3">
+                <img src="{{ asset('mainassets/img/abed.jpg') }}" alt="مطور 3">
                 <h3>عبد الكريم</h3>
             </div>
             <div class="developer-item">
@@ -251,7 +261,7 @@
                 <h3>عبد الله</h3>
             </div>
             <div class="developer-item">
-                <img src="" alt="مطور 5">
+                <img src="{{ asset('mainassets/img/hosam2.jpeg') }}" alt="مطور 5">
                 <h3>حسام</h3>
             </div>
         </div>
